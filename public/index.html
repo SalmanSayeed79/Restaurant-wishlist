@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant Wish-List</title>
+    <script src="https://use.fontawesome.com/3193a87597.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <h1>Restaurant Wish-List</h1>
+    <div class="container">
+    <div class="input">
+        <form >
+            <input type="text" id="name" name="restaurant" placeholder="Restaurant Name">
+            <input type="text" id="location" name="location" placeholder="Location">
+            <p id='add'><i class="fa fa-plus-square fa-2x" aria-hidden="true"></i></p>
+        </form>
+    </div>
+    <div class="contents">
+
+        <ul id="list"></ul>
+        <button id="total">Submit</button>
+    </div>
+    </div>
+    
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDlj8AJ4HjMuvh5dPwdxvJGqd3_HTQD2D4",
+          authDomain: "wishlist-2edb4.firebaseapp.com",
+          databaseURL: "https://wishlist-2edb4.firebaseio.com",
+          projectId: "wishlist-2edb4",
+          storageBucket: "wishlist-2edb4.appspot.com",
+          messagingSenderId: "86827023450",
+          appId: "1:86827023450:web:281ed1cdd7bc87ba496c63"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db=firebase.firestore();
+      </script>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
